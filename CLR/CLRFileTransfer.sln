@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32408.312
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLRFileTransfer", "CLRFileTransfer.csproj", "{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLR", "CLR", "{2578AD32-3AF7-4748-B725-4FCE6DD043ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B20DBFB-C5C7-40D9-8F35-73172C7BA8BE} = {2578AD32-3AF7-4748-B725-4FCE6DD043ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC134CAD-41AE-4B54-9817-061EFF26EEFF}
+	EndGlobalSection
+EndGlobal
