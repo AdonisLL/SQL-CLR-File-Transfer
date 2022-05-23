@@ -30,6 +30,8 @@ Sample execution
 
 ## References 
 
-https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies?view=sql-server-ver16
+[Managing CLR Integration Assemblies](https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies?view=sql-server-ver16)
 
-https://thedatacrew.com/sql-server-clr-function-on-azure-sql-server-managed-instance/
+[SQL Server CLR Function on Azure SQL Server Managed Instance](https://thedatacrew.com/sql-server-clr-function-on-azure-sql-server-managed-instance/)
+
+[Create External Data SSource](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true&tabs=dedicated)
