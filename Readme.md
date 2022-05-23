@@ -25,8 +25,14 @@ The installation script creates a  SQL function named MoveToBlob which executes 
 Sample execution 
 ` SELECT dbo.MoveFileToBlob('ConnectionString','BlobContainerName','FileUrl') `
 
+Currently for testing simplicity the select statement returns a string of 'TRUE' or the Exception Text if an error occurs.
 
+`DECLARE @resultvalue nvarchar(max) = (SELECT dbo.MoveFileToBlob('ConnectionString','BlobContainerName','FileUrl')))'`
 
+`IF @resultvalue = 'TRUE'`
+	`PRINT 'Transfer Was Successful'`
+`ELSE`
+  ` PRINT 'Transfer Failed'`
 
 ## References 
 
