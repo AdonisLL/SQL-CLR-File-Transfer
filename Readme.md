@@ -34,4 +34,4 @@ Sample execution
 
 [SQL Server CLR Function on Azure SQL Server Managed Instance](https://thedatacrew.com/sql-server-clr-function-on-azure-sql-server-managed-instance/)
 
-[Create External Data SSource](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true&tabs=dedicated)
+[Create External Data Source](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azuresqldb-mi-current&preserve-view=true&tabs=dedicated)
