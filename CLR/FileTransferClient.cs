@@ -16,7 +16,7 @@ public class FileTransferClient
         string blobContainer, string filePath)
     {
         _storageAccountConnectionString = storageAccountConnectionString;
-        _blobContainer = blobContainer;
+        _blobContainer = blobContainer.ToLower();
         _filePath = filePath;
     }
 
@@ -56,8 +56,11 @@ public class FileTransferClient
             //get the file reference
             CloudFile file = fileDirectory.GetFileReference(fileName);
 
+            var str = new MemoryStream();
+            await file.DownloadToStreamAsync(str);
+
             //Upload to blob storage
-            await uploadBlobAsync(file);
+            await uploadBlobAsync(str);
             return true;
         }
         catch (Exception ex)
@@ -66,7 +69,7 @@ public class FileTransferClient
         }
     }
 
-    public async Task uploadBlobAsync(CloudFile file)
+    public async Task uploadBlobAsync(MemoryStream stream)
     {
         var fileName = Path.GetFileName(_filePath);
 
@@ -76,11 +79,7 @@ public class FileTransferClient
         var container = blobClient.GetContainerReference(_blobContainer);
 
         CloudBlockBlob cloudBlockBlob = container.GetBlockBlobReference(fileName);
-
-        using (Stream str = await cloudBlockBlob.OpenWriteAsync())
-        {
-            await file.DownloadToStreamAsync(str);
-        };
+        await cloudBlockBlob.UploadFromStreamAsync(stream);
     }
 
     private CloudStorageAccount GetStorageAccount()
