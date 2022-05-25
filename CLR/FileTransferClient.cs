@@ -58,6 +58,7 @@ public class FileTransferClient
 
             var str = new MemoryStream();
             await file.DownloadToStreamAsync(str);
+            str.Position = 0;
 
             //Upload to blob storage
             await uploadBlobAsync(str);
