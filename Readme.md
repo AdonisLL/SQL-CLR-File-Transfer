@@ -8,18 +8,16 @@ The code sample has also been included for reference.
 
 ## Installation
 
-1. Open the SQL installation script from the repository.
+1. Open and run the SQL script named 'ADD_SYS_TRUSTED_ASSEMBLIES.sql' from the repository. This script adds the assemblies to the system table 'sys.trusted_assemblies', by listing the assemblies as trusted they can be loaded into SQL server when the default setting of  `clr strict security` is on and without having to set the entire database as `TRUSTWORTY` for security purposes.
 
-2. Update the Using Statement in the script to reference your database.
-
-3. Execute the script.
+2. Open the SQL script named 'CLR_INSTALL.sql' update the using statement in the script to reference the database you wish to use with the CLR function and run the script, this adds the assemblies needed to execute the CLR function.
 
 ## Usage
 
-The installation script creates a  SQL function named MoveToBlob which executes the CLR code taking the following parameters.
+The installation script creates a  SQL function named MoveFileToBlob which executes the CLR code taking the following parameters.
 
-1. @storageAccountConnectionString = the connection string for the Azure storage account containing the Azure FIle share and Blob container.
-2. @blobContainerName = The name of the BLob container which the files will be copied to.
+1. @storageAccountConnectionString = the connection string for the Azure storage account containing the Azure File share and Blob container.
+2. @blobContainerName = The name of the Blob container which the files will be copied to.
 3. @fileUrl the URL of the file copied from Azure File Share.
 
 Sample execution 
